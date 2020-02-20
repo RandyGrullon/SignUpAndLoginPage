@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+            xmlns:local="clr-namespace:SignUpAndLoginPage.Views.ContentTabbed"
+            mc:Ignorable="d"
+             x:Class="SignUpAndLoginPage.Views.ContentTabbed.MenuTabbedPage">
+
+    <local:HomePage  Title="Home" IconImageSource="casa"/>
+    <local:DiscoveryPage Title="Discovery" IconImageSource="pin"/>
+    <local:BookMarkPage Title="BookMark" IconImageSource="marcador"/>
+    <local:TopFoodPage Title="Top Food" IconImageSource="trofeo"/>
+    <local:ProfilePage Title="Profile" IconImageSource="usuario"/>
+
+</TabbedPage>

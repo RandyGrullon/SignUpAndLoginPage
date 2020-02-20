@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="SignUpAndLoginPage.Views.LoginPage"
+             NavigationPage.HasNavigationBar="False">
+    
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid Padding="20,20">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="80"/>
+                    <RowDefinition Height="190"/>
+                    <RowDefinition Height="70"/>
+                    <RowDefinition Height="70"/>
+                    <RowDefinition Height="35"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="120"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Login" 
+                   Grid.RowSpan="1"
+                   Grid.Column="0" 
+                   Grid.ColumnSpan="4" 
+                   FontSize="45" 
+                   FontAttributes="Bold" 
+                   TextColor="Black"/>
+
+                <Label Text="Sign Up"
+                   Grid.ColumnSpan="3" 
+                   Grid.Column="7"  
+                   Margin="0,15,0,0"
+                   FontSize="26" 
+                   FontAttributes="Bold" 
+                   TextColor="Gray" >
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding LoginToSignUpCommand}" NumberOfTapsRequired="1"/>
+                    </Label.GestureRecognizers>
+                </Label>
+
+
+                <Image Source="User"
+                   Grid.Column="2" 
+                   Grid.ColumnSpan="6" 
+                   Grid.Row="1"
+                   Margin="0,25,0,0"/>
+
+                <Entry Text="{Binding UserL.Username}" Placeholder="Username or email address" 
+                   x:Name="User"
+                   Grid.Column="1" 
+                   Grid.Row="2" 
+                   Grid.ColumnSpan="8"/>
+
+                <Entry Text="{Binding UserL.Password}" Placeholder="Password" 
+                   x:Name="Pass"
+                   Grid.Column="1" 
+                   Grid.Row="3" 
+                   Grid.ColumnSpan="8"
+                   IsPassword="{Binding IsVisible}"/>
+
+                <Button Text="LOG IN" 
+                    Command="{Binding LValidateCommand}"
+                    Grid.Row="5" 
+                    Grid.Column="2" 
+                    Grid.ColumnSpan="6"
+                    FontSize="24"
+                    FontAttributes="Bold"
+                    TextColor="Gray"
+                    BackgroundColor="White"/>
+
+                <Label Text="Login With"
+                   Grid.Column="4"
+                   Grid.ColumnSpan="3"
+                   Grid.Row="7"
+                   TextColor="Gray"
+                   FontSize="16"
+                   FontAttributes="Italic"
+                   Margin="0,0,0,25"/>
+
+                <Image Source="Gp" 
+                       Grid.Column="1" 
+                       Grid.Row="7" 
+                       Grid.ColumnSpan="2"/>
+
+                <Image Source="Github" 
+                       Grid.Column="3" 
+                       Grid.Row="7" 
+                       Grid.ColumnSpan="2"/>
+
+                <Image Source="T" 
+                       Grid.Column="5" 
+                       Grid.Row="7" 
+                       Grid.ColumnSpan="2"/>
+
+                <Image Source="F" 
+                       Grid.Column="7" 
+                       Grid.Row="7" 
+                       Grid.ColumnSpan="2"/>
+
+                <Image Source="{Binding ImageVisible}" 
+                       Grid.Column="8" 
+                       Grid.Row="3"
+                       x:Name="PV">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding VisibleCommand}"/>
+                    </Image.GestureRecognizers>
+                </Image>
+
+                <Image Source="W" 
+                       Grid.Column="8" 
+                       Grid.Row="4"/>
+
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+
+</ContentPage>

@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:Local1="clr-namespace:SignUpAndLoginPage.Views.ContentViews"
+             mc:Ignorable="d"
+             x:Class="SignUpAndLoginPage.Views.ContentTabbed.DiscoveryPage">
+    <ContentPage.Content >
+        <Grid Padding="30,30">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Local1:GeneralContentView Grid.Row="0" Grid.Column="0" ImageView="cerveza" LabelTitle="Bars and Hotels" LabelSubTitle="42 Place">
+                <Local1:GeneralContentView.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Seleccion"/>
+                </Local1:GeneralContentView.GestureRecognizers>
+            </Local1:GeneralContentView>
+
+            <Local1:GeneralContentView Grid.Row="0" Grid.Column="1" ImageView="bandeja" LabelTitle="Fine Dining" LabelSubTitle="15 Place">
+                <Local1:GeneralContentView.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Seleccion"/>
+                </Local1:GeneralContentView.GestureRecognizers>
+            </Local1:GeneralContentView>
+            
+            
+            <Local1:GeneralContentView Grid.Row="1" Grid.Column="0" ImageView="tienda" LabelTitle="Cafe" LabelSubTitle="28 Place">
+                <Local1:GeneralContentView.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Seleccion"/>
+                </Local1:GeneralContentView.GestureRecognizers>
+            </Local1:GeneralContentView>
+            
+            
+            <Local1:GeneralContentView Grid.Row="1" Grid.Column="1" ImageView="mapa" LabelTitle="Nearby" LabelSubTitle="34 Place">
+                <Local1:GeneralContentView.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Seleccion"/>
+                </Local1:GeneralContentView.GestureRecognizers>
+            </Local1:GeneralContentView>
+            
+            
+            <Local1:GeneralContentView Grid.Row="2" Grid.Column="0" ImageView="comida" LabelTitle="FastFood" LabelSubTitle="29 Place">
+                <Local1:GeneralContentView.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Seleccion"/>
+                </Local1:GeneralContentView.GestureRecognizers>
+            </Local1:GeneralContentView>
+            
+            
+            <Local1:GeneralContentView Grid.Row="2" Grid.Column="1" ImageView="pizza" LabelTitle="Featured Foods" LabelSubTitle="21 Place">
+                <Local1:GeneralContentView.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Seleccion"/>
+                </Local1:GeneralContentView.GestureRecognizers>
+            </Local1:GeneralContentView>
+
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
