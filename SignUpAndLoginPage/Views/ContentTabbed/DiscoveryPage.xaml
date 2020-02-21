@@ -18,44 +18,43 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-
-            <Local1:GeneralContentView Grid.Row="0" Grid.Column="0" ImageView="cerveza" LabelTitle="Bars and Hotels" LabelSubTitle="42 Place">
+            <Local1:GeneralContentView BackgroundColor="{Binding ColorHotels}" Grid.Row="0" Grid.Column="0" ImageView="{Binding Hotels.ImageView}" LabelTitle="{Binding Hotels.LabelTitle}" LabelSubTitle="{Binding Hotels.LabelSubTitle}">
                 <Local1:GeneralContentView.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="Seleccion"/>
+                    <TapGestureRecognizer  Command="{Binding ColorCommand}" CommandParameter="Hotels"/>
                 </Local1:GeneralContentView.GestureRecognizers>
             </Local1:GeneralContentView>
 
-            <Local1:GeneralContentView Grid.Row="0" Grid.Column="1" ImageView="bandeja" LabelTitle="Fine Dining" LabelSubTitle="15 Place">
+            <Local1:GeneralContentView BackgroundColor="{Binding ColorDining}" Grid.Row="0" Grid.Column="1" ImageView="{Binding Dining.ImageView}" LabelTitle="{Binding Dining.LabelTitle}" LabelSubTitle="{Binding Dining.LabelSubTitle}">
                 <Local1:GeneralContentView.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="Seleccion"/>
+                    <TapGestureRecognizer Command="{Binding ColorCommand}" CommandParameter="Dining"/>
                 </Local1:GeneralContentView.GestureRecognizers>
             </Local1:GeneralContentView>
-            
-            
-            <Local1:GeneralContentView Grid.Row="1" Grid.Column="0" ImageView="tienda" LabelTitle="Cafe" LabelSubTitle="28 Place">
+
+
+            <Local1:GeneralContentView BackgroundColor="{Binding ColorCafe}" Grid.Row="1" Grid.Column="0" ImageView="{Binding Cafe.ImageView}" LabelTitle="{Binding Cafe.LabelTitle}" LabelSubTitle="{Binding Cafe.LabelSubTitle}">
                 <Local1:GeneralContentView.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="Seleccion"/>
+                    <TapGestureRecognizer Command="{Binding ColorCommand}" CommandParameter="Cafe"/>
                 </Local1:GeneralContentView.GestureRecognizers>
             </Local1:GeneralContentView>
-            
-            
-            <Local1:GeneralContentView Grid.Row="1" Grid.Column="1" ImageView="mapa" LabelTitle="Nearby" LabelSubTitle="34 Place">
+
+
+            <Local1:GeneralContentView BackgroundColor="{Binding ColorNearby}" Grid.Row="1" Grid.Column="1" ImageView="{Binding Nearby.ImageView}" LabelTitle="{Binding Nearby.LabelTitle}" LabelSubTitle="{Binding Nearby.LabelSubTitle}">
                 <Local1:GeneralContentView.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="Seleccion"/>
+                    <TapGestureRecognizer Command="{Binding ColorCommand}" CommandParameter="Nearby"/>
                 </Local1:GeneralContentView.GestureRecognizers>
             </Local1:GeneralContentView>
-            
-            
-            <Local1:GeneralContentView Grid.Row="2" Grid.Column="0" ImageView="comida" LabelTitle="FastFood" LabelSubTitle="29 Place">
+
+
+            <Local1:GeneralContentView BackgroundColor="{Binding ColorFastFood}" Grid.Row="2" Grid.Column="0" ImageView="{Binding FastFood.ImageView}" LabelTitle="{Binding FastFood.LabelTitle}" LabelSubTitle="{Binding FastFood.LabelSubTitle}">
                 <Local1:GeneralContentView.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="Seleccion"/>
+                    <TapGestureRecognizer Command="{Binding ColorCommand}" CommandParameter="FastFood"/>
                 </Local1:GeneralContentView.GestureRecognizers>
             </Local1:GeneralContentView>
-            
-            
-            <Local1:GeneralContentView Grid.Row="2" Grid.Column="1" ImageView="pizza" LabelTitle="Featured Foods" LabelSubTitle="21 Place">
+
+
+            <Local1:GeneralContentView BackgroundColor="{Binding ColorFeaturedFoods}" Grid.Row="2" Grid.Column="1" ImageView="{Binding FeaturedFoods.ImageView}" LabelTitle="{Binding FeaturedFoods.LabelTitle}" LabelSubTitle="{Binding FeaturedFoods.LabelSubTitle}">
                 <Local1:GeneralContentView.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="Seleccion"/>
+                    <TapGestureRecognizer Command="{Binding ColorCommand}" CommandParameter="FeaturedFoods"/>
                 </Local1:GeneralContentView.GestureRecognizers>
             </Local1:GeneralContentView>
 

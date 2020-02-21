@@ -1,4 +1,4 @@
-﻿using SignUpAndLoginPage.ViewModel;
+﻿using SignUpAndLoginPage.ViewModels;
 using SignUpAndLoginPage.Views.ContentViews;
 using System;
 using System.Collections.Generic;

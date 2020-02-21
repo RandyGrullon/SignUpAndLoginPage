@@ -8,24 +8,24 @@ using System.Text;
 using System.Windows.Input;
 using Xamarin.Forms;
 
-namespace SignUpAndLoginPage.ViewModel
+namespace SignUpAndLoginPage.ViewModels
 {
-   public class LoginPageViewModel : INotifyPropertyChanged
+    public class SignUpPageViewModel : INotifyPropertyChanged 
     {
         public User UserL { get; set; }
-        public ICommand LValidateCommand { get; set; }
-        public ICommand LoginToSignUpCommand { get; set; }
+        public ICommand SValidateCommand { get; set; }
+        public ICommand SignUpToLoginCommand { get; set; }
         public ICommand VisibleCommand { get; set; }
         public string ImageVisible { get; set; }
         public bool IsVisible { get; set; }
-        
-        public LoginPageViewModel()
+
+        public SignUpPageViewModel()
         {
             UserL = new User();
 
-            LValidateCommand = new Command(async()=>
+            SValidateCommand = new Command(async () =>
             {
-                if (string.IsNullOrEmpty(UserL.Username) || (string.IsNullOrEmpty(UserL.Password)))
+                if (string.IsNullOrEmpty(UserL.Gmail) || (string.IsNullOrEmpty(UserL.Username)) || (string.IsNullOrEmpty(UserL.Password)) || (string.IsNullOrEmpty(UserL.Repassword)))
                 {
                     await App.Current.MainPage.DisplayAlert("Alert", "You have been alerted!", "ok");
                 }
@@ -35,26 +35,22 @@ namespace SignUpAndLoginPage.ViewModel
                 }
             });
 
-            LoginToSignUpCommand = new Command(async()=>
+            SignUpToLoginCommand = new Command(async () =>
             {
-                await App.Current.MainPage.Navigation.PushAsync(new SignUpPage());
+                await App.Current.MainPage.Navigation.PopToRootAsync();
             }
             );
+
             IsVisible = true;
             ImageVisible = "eye";
 
-            VisibleCommand  = new Command(()=> 
+            VisibleCommand = new Command(() =>
             {
                 IsVisible = !IsVisible;
                 ImageVisible = IsVisible ? "Eye" : "Neye";
             });
-
-           
-
-           
-
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
-    }
+    }   
 }
